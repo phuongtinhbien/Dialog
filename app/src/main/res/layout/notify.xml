@@ -29,6 +29,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:id="@+id/icon_notify"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_assignment_turned_in_black_24dp"/>
                     <TextView

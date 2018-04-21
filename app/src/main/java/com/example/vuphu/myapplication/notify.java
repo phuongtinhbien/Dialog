@@ -19,6 +19,7 @@ public class notify {
     private final Dialog dialog;
     private Button dialogButton;
     private TextView text;
+    private ImageView icon;
     final LinearLayout.LayoutParams lp = new
             LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -32,6 +33,7 @@ public class notify {
   dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.R.color.transparent));
         dialog.setContentView(R.layout.notify);
         dialogButton = dialog.findViewById(R.id.btn_ok);
+        icon = dialog.findViewById(R.id.icon_notify);
         text = dialog.findViewById(R.id.text_notify);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,14 @@ public class notify {
                 dialog.dismiss();
             }
         });
+    }
+
+    public void setIcon(int icon) {
+        this.icon.setImageResource(icon);
+    }
+
+    public void setText(String text) {
+        this.text.setText(text);
     }
 
     public void show() {
